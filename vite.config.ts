@@ -20,19 +20,20 @@ export default defineConfig({
       fileName: (format) => `index.${format === 'es' ? 'js' : 'cjs'}`,
     },
     rollupOptions: {
-      external: [
-        'react',
-        'react-dom',
-        'react-dom/client',
-        'react-router-dom',
-        'react/jsx-runtime',
-        '@mui/material',
-        '@mui/icons-material',
-        '@emotion/react',
-        '@emotion/styled',
-        '@react-oauth/google',
-        '@rationalbloks/frontblok-auth',
-      ],
+      external: (id) =>
+        [
+          'react',
+          'react-dom',
+          'react-dom/client',
+          'react-router-dom',
+          'react/jsx-runtime',
+          '@emotion/react',
+          '@emotion/styled',
+          '@react-oauth/google',
+          '@rationalbloks/frontblok-auth',
+        ].includes(id) ||
+        id.startsWith('@mui/material') ||
+        id.startsWith('@mui/icons-material'),
       output: {
         globals: {
           react: 'React',
