@@ -1,7 +1,7 @@
 {
   "name": "@rationalbloks/frontblok-components",
-  "version": "0.1.1",
-  "description": "Reusable React components for RationalBloks frontends - Auth views, Error handling, Modals",
+  "version": "0.2.0",
+  "description": "Reusable React components for RationalBloks frontends - Auth views, Settings, Error handling, Modals, Theme",
   "author": "RationalBloks Team",
   "license": "MIT",
   "private": false,

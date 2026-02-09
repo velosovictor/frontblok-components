@@ -64,8 +64,20 @@ export { default as ForgotPasswordView } from './views/ForgotPasswordView';
 export { default as ResetPasswordView } from './views/ResetPasswordView';
 export { default as VerifyEmailView } from './views/VerifyEmailView';
 export { default as SupportView } from './views/SupportView';
+export { SettingsView } from './views/SettingsView';
 
 // View Props Types
 export type { ForgotPasswordViewProps } from './views/ForgotPasswordView';
 export type { ResetPasswordViewProps } from './views/ResetPasswordView';
 export type { VerifyEmailViewProps } from './views/VerifyEmailView';
+export type { SettingsViewProps, SettingsViewAuthApi, SettingsViewUser } from './views/SettingsView';
+
+// Theme
+export { 
+  createAppTheme, 
+  defaultPalette, 
+  defaultTypography, 
+  defaultComponents, 
+  defaultNavbarGradient 
+} from './theme';
+export type { AppThemeOptions } from './theme';
