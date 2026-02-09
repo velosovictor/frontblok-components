@@ -30,7 +30,7 @@
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@react-oauth/google": "^0.12.0",
-    "@rationalbloks/frontblok-auth": "^0.3.0",
+    "@rationalbloks/frontblok-auth": "^0.3.0 || ^0.4.0",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0",
     "react-router-dom": "^6.0.0 || ^7.0.0"
