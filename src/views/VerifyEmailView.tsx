@@ -17,13 +17,13 @@ import {
 import { CheckCircle, Error as ErrorIcon } from '@mui/icons-material';
 
 export interface VerifyEmailViewProps {
-  /** Auth API object with verifyEmail method */
+  // Auth API object with verifyEmail method
   authApi: {
     verifyEmail: (token: string) => Promise<unknown>;
   };
-  /** Route to navigate after successful verification (default: '/projects') */
+  // Route to navigate after successful verification (default: '/projects')
   successRoute?: string;
-  /** Route to navigate on error (default: '/settings') */
+  // Route to navigate on error (default: '/settings')
   errorRoute?: string;
 }
 

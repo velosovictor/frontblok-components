@@ -18,11 +18,11 @@ import {
 import { Email as EmailIcon, ArrowBack } from '@mui/icons-material';
 
 export interface ForgotPasswordViewProps {
-  /** Auth API object with requestPasswordReset method */
+  // Auth API object with requestPasswordReset method
   authApi: {
     requestPasswordReset: (email: string) => Promise<unknown>;
   };
-  /** Route to navigate back to login (default: '/auth') */
+  // Route to navigate back to login (default: '/auth')
   authRoute?: string;
 }
 

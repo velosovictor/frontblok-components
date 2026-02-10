@@ -157,40 +157,33 @@ export const defaultNavbarGradient = {
 // ========================================================================
 
 export interface AppThemeOptions {
-  /** Override default palette colors */
+  // Override default palette colors
   paletteOverrides?: Record<string, unknown>;
-  /** Override default typography settings */
+  // Override default typography settings
   typographyOverrides?: Record<string, unknown>;
-  /** Override default component styles */
+  // Override default component styles
   componentsOverrides?: ThemeOptions['components'];
-  /** Border radius for shapes. Default: 12 */
+  // Border radius for shapes. Default: 12
   borderRadius?: number;
 }
 
-/**
- * Creates a MUI theme with RationalBloks defaults.
- * 
- * All defaults can be overridden per-app via the options parameter.
- * The defaults include:
- * - Warm beige background
- * - Professional blue primary palette
- * - System font typography with tight letter-spacing
- * - Polished component overrides (no uppercase buttons, rounded cards, etc.)
- * 
- * @param options - Customization options
- * @returns A MUI Theme object
- * 
- * @example
- * ```typescript
- * // Use defaults
- * const theme = createAppTheme();
- * 
- * // Override primary color
- * const theme = createAppTheme({
- *   paletteOverrides: { primary: { main: '#e91e63' } },
- * });
- * ```
- */
+// Creates a MUI theme with RationalBloks defaults.
+//
+// All defaults can be overridden per-app via the options parameter.
+// The defaults include:
+// - Warm beige background
+// - Professional blue primary palette
+// - System font typography with tight letter-spacing
+// - Polished component overrides (no uppercase buttons, rounded cards, etc.)
+//
+// Example:
+//   // Use defaults
+//   const theme = createAppTheme();
+//
+//   // Override primary color
+//   const theme = createAppTheme({
+//     paletteOverrides: { primary: { main: '#e91e63' } },
+//   });
 export function createAppTheme(options: AppThemeOptions = {}) {
   const {
     paletteOverrides = {},

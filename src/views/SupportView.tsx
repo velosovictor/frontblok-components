@@ -1,6 +1,4 @@
-/**
- * Support View - Simplified & Clean
- */
+// Support View - Simplified & Clean
 import { useState } from 'react';
 import {
   Box,

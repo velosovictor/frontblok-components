@@ -18,11 +18,11 @@ import {
 import { Lock as LockIcon, CheckCircle } from '@mui/icons-material';
 
 export interface ResetPasswordViewProps {
-  /** Auth API object with resetPassword method */
+  // Auth API object with resetPassword method
   authApi: {
     resetPassword: (token: string, newPassword: string) => Promise<unknown>;
   };
-  /** Route to navigate after successful reset (default: '/auth') */
+  // Route to navigate after successful reset (default: '/auth')
   authRoute?: string;
 }
 

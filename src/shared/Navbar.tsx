@@ -59,7 +59,7 @@ export interface NavbarConfig {
   brand: BrandConfig;
   navigation: NavigationConfig;
   useAuth: () => AuthHookResult;
-  /** Gradient colors for navbar background */
+  // Gradient colors for navbar background
   navbarGradient: {
     start: string;  // e.g., '#1800ad'
     end: string;    // e.g., '#0d0067'

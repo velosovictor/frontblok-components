@@ -60,16 +60,16 @@ export interface SettingsViewUser {
 }
 
 export interface SettingsViewProps {
-  /** The auth API instance (must have deleteAccount method) */
+  // The auth API instance (must have deleteAccount method)
   authApi: SettingsViewAuthApi;
-  /** The useAuth hook from your app */
+  // The useAuth hook from your app
   useAuth: () => {
     user: SettingsViewUser | null;
     logout: () => void;
   };
-  /** Route to navigate to after logout/delete. Default: '/' */
+  // Route to navigate to after logout/delete. Default: '/'
   homeRoute?: string;
-  /** Optional additional content to render between profile and danger zone */
+  // Optional additional content to render between profile and danger zone
   children?: React.ReactNode;
 }
 
