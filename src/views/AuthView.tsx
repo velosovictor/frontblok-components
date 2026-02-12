@@ -95,8 +95,8 @@ export const AuthView: React.FC<AuthViewProps> = ({
         setLocalError('Passwords do not match');
         return false;
       }
-      if (formData.password.length < 6) {
-        setLocalError('Password must be at least 6 characters');
+      if (formData.password.length < 8) {
+        setLocalError('Password must be at least 8 characters');
         return false;
       }
     }
