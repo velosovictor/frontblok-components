@@ -275,6 +275,7 @@ export function createNavbar(config: NavbarConfig) {
             anchorEl={anchorEl}
             open={isMenuOpen}
             onClose={handleMenuClose}
+            disableScrollLock
             anchorOrigin={{
               vertical: 'bottom',
               horizontal: 'right',
