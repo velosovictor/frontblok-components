@@ -18,7 +18,7 @@ import {
   MenuItem,
   IconButton,
   Chip,
-  Divider
+  Divider,
 } from '@mui/material';
 import {
   ExitToApp,
@@ -162,7 +162,6 @@ export function createNavbar(config: NavbarConfig) {
           sx={{ 
             display: 'flex', 
             alignItems: 'center', 
-            flexGrow: 1,
             cursor: 'pointer',
             '&:hover': {
               opacity: 0.85
@@ -195,6 +194,26 @@ export function createNavbar(config: NavbarConfig) {
             {brand.name}
           </Typography>
         </Box>
+
+        {/* Inline Sub-Toolbar (hierarchy dropdown, breadcrumbs, etc.) */}
+        {SubToolbar && (
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', ml: 2, minWidth: '220px' }}>
+            <Divider
+              orientation="vertical"
+              flexItem
+              sx={{
+                mx: 2,
+                borderColor: 'rgba(255, 255, 255, 0.3)',
+                height: '24px',
+                alignSelf: 'center',
+              }}
+            />
+            <SubToolbar />
+          </Box>
+        )}
+
+        {/* Spacer */}
+        <Box sx={{ flexGrow: 1 }} />
 
         {/* Navigation Links */}
         <Box sx={{ 
@@ -411,23 +430,6 @@ export function createNavbar(config: NavbarConfig) {
           </Menu>
         )}
       </Toolbar>
-
-      {/* Optional Sub-Toolbar (hierarchy selector, breadcrumbs, etc.) */}
-      {SubToolbar && (
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            px: 3,
-            py: 0.5,
-            minHeight: 40,
-            borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-            background: 'rgba(0, 0, 0, 0.12)',
-          }}
-        >
-          <SubToolbar />
-        </Box>
-      )}
     </AppBar>
   );
   };
