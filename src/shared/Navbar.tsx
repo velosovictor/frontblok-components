@@ -68,6 +68,12 @@ export interface NavbarConfig {
   authRoute?: string;
   settingsRoute?: string;
   isActiveOverride?: (path: string, locationPath: string) => boolean;
+  /**
+   * Optional React component rendered as a secondary toolbar row below the
+   * main navigation bar.  Use this for page-level controls such as a
+   * hierarchy selector, breadcrumbs, filters, etc.
+   */
+  subToolbar?: React.ComponentType;
 }
 
 // ========================================================================
@@ -84,6 +90,7 @@ export function createNavbar(config: NavbarConfig) {
     authRoute = '/auth',
     settingsRoute = '/settings',
     isActiveOverride,
+    subToolbar: SubToolbar,
   } = config;
 
   // Return the configured Navbar component
@@ -404,6 +411,23 @@ export function createNavbar(config: NavbarConfig) {
           </Menu>
         )}
       </Toolbar>
+
+      {/* Optional Sub-Toolbar (hierarchy selector, breadcrumbs, etc.) */}
+      {SubToolbar && (
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            px: 3,
+            py: 0.5,
+            minHeight: 40,
+            borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+            background: 'rgba(0, 0, 0, 0.12)',
+          }}
+        >
+          <SubToolbar />
+        </Box>
+      )}
     </AppBar>
   );
   };
