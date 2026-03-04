@@ -101,6 +101,10 @@ export const defaultComponents: ThemeOptions['components'] = {
       root: {
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)',
         border: '1px solid #f3f4f6',
+        outline: 'none',
+        '&:focus, &:focus-visible, &:focus-within': {
+          outline: 'none',
+        },
       },
     },
   },

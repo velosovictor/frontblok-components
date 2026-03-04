@@ -1,6 +1,6 @@
 {
   "name": "@rationalbloks/frontblok-components",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Reusable React components for RationalBloks frontends - Auth views, Settings, Error handling, Modals, Theme",
   "author": "RationalBloks Team",
   "license": "MIT",
@@ -62,5 +62,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/rationalbloks/frontblok-components.git"
+  },
+  "overrides": {
+    "minimatch": ">=10.2.3"
   }
 }
